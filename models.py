@@ -12,8 +12,13 @@ class Teachers(models.Model):
 
 
 class Courses(models.Model):
-    # _name = 'academy.courses'
     _inherit = 'product.template'
 
-    # name = fields.Char()
     teacher_id = fields.Many2one('academy.teachers', string="Teacher")
+    course_term = fields.Selection([
+    ('1', "1 day"),
+    ('2', "2 days"),
+    ('3', "3 days"),
+    ('4', "4 days"),
+    ('5', "5 days"),
+])

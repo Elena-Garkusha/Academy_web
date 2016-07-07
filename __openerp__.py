@@ -21,15 +21,15 @@
 
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'website', 'website_sale',],
+    'depends': ['base', 'website_sale',],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        'templates.xml',
         'data.xml',
         'demo.xml',
         'views.xml',
+        'templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
